@@ -15,8 +15,8 @@ const journeySteps = [
   {
     icon: '📋',
     title: 'Plan',
-    description: 'Book visits instantly. AI gathers your symptoms beforehand so your doctor is ready.',
-    aiFeature: 'AI Pre-Visit Prep',
+    description: 'Book visits instantly. AI helps gather info so your doctor is prepared.',
+    aiFeature: 'AI saves you time',
     gradient: 'from-patient-purple to-purple-600',
     shadow: 'rgba(167,139,250,0.35)',
     rotate: '2deg',
@@ -24,8 +24,8 @@ const journeySteps = [
   {
     icon: '💪',
     title: 'Thrive',
-    description: 'Get care. AI checks in after visits and tracks your progress over time.',
-    aiFeature: 'AI Follow-up & Insights',
+    description: 'Get care from real doctors. AI checks in after to make sure you are on track.',
+    aiFeature: 'AI keeps you connected',
     gradient: 'from-patient-orange to-orange-600',
     shadow: 'rgba(251,146,60,0.35)',
     rotate: '-2deg',
@@ -33,8 +33,8 @@ const journeySteps = [
   {
     icon: '🌱',
     title: 'Grow',
-    description: 'Stay ahead. AI reminds you of vaccinations, screenings, and checkups.',
-    aiFeature: 'AI Preventive Nudges',
+    description: 'Stay ahead with reminders for vaccinations, screenings, and checkups.',
+    aiFeature: 'AI keeps you on track',
     gradient: 'from-patient-pink to-pink-600',
     shadow: 'rgba(244,114,182,0.35)',
     rotate: '3deg',
@@ -46,14 +46,14 @@ export default function PatientJourney() {
     <section className="px-4 mb-24 md:mb-32 max-w-6xl mx-auto">
       {/* Header */}
       <div className="text-center mb-12 md:mb-16">
-        <motion.div
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-2.5 bg-patient-green/10 border border-patient-green/20 text-patient-green text-sm font-semibold px-5 py-2.5 rounded-full mb-6"
+          className="section-label gradient-text-green"
         >
-          <span>✨</span> Powered by AI
-        </motion.div>
+          Simple by Design
+        </motion.p>
         
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ export default function PatientJourney() {
           transition={{ delay: 0.2 }}
           className="text-lg md:text-xl text-gray-500 max-w-lg mx-auto"
         >
-          AI guides you every step of the way — from booking to staying healthy for life.
+          Real doctors. Real relationships. AI just makes it simpler.
         </motion.p>
       </div>
       
@@ -114,8 +114,8 @@ export default function PatientJourney() {
               
               {/* AI Badge */}
               {step.aiFeature && (
-                <span className="inline-block bg-black text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-                  🤖 {step.aiFeature}
+                <span className="inline-block bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1.5 rounded-full">
+                  ✨ {step.aiFeature}
                 </span>
               )}
             </motion.div>

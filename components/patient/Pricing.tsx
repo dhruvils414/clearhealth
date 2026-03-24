@@ -25,7 +25,7 @@ export default function PatientPricing() {
               viewport={{ once: true }}
               className="section-label text-patient-green"
             >
-              Pricing
+              Clear Prices
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function PatientPricing() {
               transition={{ delay: 0.1 }}
               className="section-title text-white mb-4"
             >
-              Radically simple.
+              See it. Pay it. Done.
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ export default function PatientPricing() {
               transition={{ delay: 0.2 }}
               className="text-lg md:text-xl text-white/40"
             >
-              See the price. Pay the price. That's it.
+              No bills in the mail. No codes. No surprises.
             </motion.p>
           </div>
           

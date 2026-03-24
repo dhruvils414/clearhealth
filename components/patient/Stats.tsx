@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion'
 
 const stats = [
-  { value: '🤖', label: 'AI-powered care', gradient: 'gradient-text-green' },
-  { value: '$0', label: 'Surprise bills', gradient: 'gradient-text-purple' },
+  { value: '👨‍👩‍👧‍👦', label: 'All ages welcome', gradient: 'gradient-text-green' },
+  { value: '💰', label: 'Clear prices. No games.', gradient: 'gradient-text-purple' },
   { value: '1', label: 'Day to be seen', gradient: 'gradient-text-orange' },
-  { value: '∞', label: 'Ongoing support', gradient: 'gradient-text-pink' },
+  { value: '∞', label: 'One team for life', gradient: 'gradient-text-pink' },
 ]
 
 export default function PatientStats() {
