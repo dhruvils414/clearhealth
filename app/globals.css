@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  /* ===== PATIENT GRADIENTS ===== */
+  .gradient-text-patient {
+    background: linear-gradient(135deg, #4ADE80 0%, #A78BFA 40%, #FB923C 70%, #F472B6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-green {
+    background: linear-gradient(135deg, #4ADE80, #22C55E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-purple {
+    background: linear-gradient(135deg, #A78BFA, #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-orange {
+    background: linear-gradient(135deg, #FB923C, #F97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-pink {
+    background: linear-gradient(135deg, #F472B6, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* ===== PROVIDER GRADIENTS ===== */
+  .gradient-text-provider {
+    background: linear-gradient(135deg, #3B82F6 0%, #10B981 50%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-blue {
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-teal {
+    background: linear-gradient(135deg, #10B981, #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-amber {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* ===== HERO BACKGROUNDS ===== */
+  .hero-mesh-patient {
+    background: 
+      radial-gradient(ellipse 100% 100% at 0% 0%, rgba(74,222,128,0.4) 0%, transparent 50%),
+      radial-gradient(ellipse 80% 80% at 100% 100%, rgba(167,139,250,0.35) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 60% at 50% 50%, rgba(251,146,60,0.2) 0%, transparent 50%),
+      radial-gradient(ellipse 40% 60% at 80% 20%, rgba(244,114,182,0.25) 0%, transparent 50%);
+  }
+  
+  .hero-mesh-provider {
+    background: 
+      radial-gradient(ellipse 100% 100% at 0% 0%, rgba(59,130,246,0.4) 0%, transparent 50%),
+      radial-gradient(ellipse 80% 80% at 100% 100%, rgba(16,185,129,0.35) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 60% at 50% 50%, rgba(139,92,246,0.2) 0%, transparent 50%);
+  }
+  
+  /* ===== NOISE TEXTURE ===== */
+  .noise-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  
+  /* ===== GLOWING ORB ===== */
+  .glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+  }
+  
+  .glow-orb-green {
+    background: radial-gradient(circle, rgba(74,222,128,0.2) 0%, transparent 60%);
+  }
+  
+  .glow-orb-provider {
+    background: radial-gradient(circle, rgba(16,185,129,0.2) 0%, transparent 60%);
+  }
+  
+  /* ===== BUTTONS ===== */
+  .btn-patient {
+    @apply bg-patient-green text-black font-bold py-5 px-12 rounded-full text-lg transition-all duration-300;
+    box-shadow: 0 0 80px rgba(74,222,128,0.5), 0 0 120px rgba(74,222,128,0.3);
+  }
+  
+  .btn-patient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 100px rgba(74,222,128,0.6), 0 0 160px rgba(74,222,128,0.4);
+  }
+  
+  .btn-provider {
+    @apply bg-provider-green text-black font-bold py-5 px-12 rounded-full text-lg transition-all duration-300;
+    box-shadow: 0 0 80px rgba(16,185,129,0.5), 0 0 120px rgba(16,185,129,0.3);
+  }
+  
+  .btn-provider:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 100px rgba(16,185,129,0.6), 0 0 160px rgba(16,185,129,0.4);
+  }
+  
+  /* ===== CARDS ===== */
+  .card-glass {
+    @apply bg-white/[0.03] border border-white/[0.06] rounded-3xl;
+  }
+  
+  .stat-card {
+    @apply bg-white rounded-3xl p-8 text-center;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.05);
+  }
+  
+  /* ===== SECTION STYLES ===== */
+  .section-label {
+    @apply text-xs font-bold tracking-[4px] uppercase mb-4;
+  }
+  
+  .section-title {
+    @apply text-5xl md:text-6xl font-extrabold;
+    letter-spacing: -3px;
+  }
+  
+  /* ===== AI SECTION BACKGROUNDS ===== */
+  .ai-section-patient {
+    background: 
+      radial-gradient(ellipse 80% 100% at 0% 0%, rgba(74,222,128,0.25) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 80% at 100% 100%, rgba(167,139,250,0.2) 0%, transparent 50%);
+  }
+  
+  .ai-section-provider {
+    background: 
+      radial-gradient(ellipse 80% 100% at 0% 0%, rgba(59,130,246,0.25) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 80% at 100% 100%, rgba(16,185,129,0.2) 0%, transparent 50%);
+  }
+  
+  /* ===== PRICING SECTION ===== */
+  .pricing-bg-patient {
+    background: 
+      radial-gradient(ellipse 80% 100% at 0% 100%, rgba(74,222,128,0.25) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 80% at 100% 0%, rgba(167,139,250,0.2) 0%, transparent 50%);
+  }
+  
+  /* ===== CTA SECTION ===== */
+  .cta-bg-patient {
+    background: 
+      radial-gradient(ellipse 100% 100% at 50% 100%, rgba(74,222,128,0.3) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 60% at 20% 30%, rgba(167,139,250,0.2) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 60% at 80% 30%, rgba(244,114,182,0.15) 0%, transparent 50%);
+  }
+  
+  .cta-bg-provider {
+    background: 
+      radial-gradient(ellipse 100% 100% at 50% 100%, rgba(16,185,129,0.3) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 60% at 20% 30%, rgba(59,130,246,0.2) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 60% at 80% 30%, rgba(139,92,246,0.15) 0%, transparent 50%);
+  }
+  
+  /* ===== BADGE ===== */
+  .badge-patient {
+    @apply inline-flex items-center gap-3 bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] text-white/70 text-sm font-medium px-6 py-3 rounded-full;
+  }
+  
+  .badge-provider {
+    @apply inline-flex items-center gap-3 bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] text-white/70 text-sm font-medium px-6 py-3 rounded-full;
+  }
+  
+  .badge-dot-patient {
+    @apply w-2.5 h-2.5 bg-patient-green rounded-full;
+    box-shadow: 0 0 20px #4ADE80, 0 0 40px #4ADE80;
+  }
+  
+  .badge-dot-provider {
+    @apply w-2.5 h-2.5 bg-provider-green rounded-full;
+    box-shadow: 0 0 20px #10B981, 0 0 40px #10B981;
+  }
+  
+  /* ===== FEATURE ICONS ===== */
+  .feature-icon {
+    @apply w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-3xl md:text-4xl;
+  }
+  
+  .feature-icon-green {
+    @apply bg-gradient-to-br from-patient-green to-patient-green-dark;
+    box-shadow: 0 16px 32px rgba(74,222,128,0.3);
+  }
+  
+  .feature-icon-purple {
+    @apply bg-gradient-to-br from-patient-purple to-patient-purple-dark;
+    box-shadow: 0 16px 32px rgba(167,139,250,0.3);
+  }
+  
+  .feature-icon-orange {
+    @apply bg-gradient-to-br from-patient-orange to-patient-orange-dark;
+    box-shadow: 0 16px 32px rgba(251,146,60,0.3);
+  }
+  
+  .feature-icon-pink {
+    @apply bg-gradient-to-br from-patient-pink to-patient-pink-dark;
+    box-shadow: 0 16px 32px rgba(244,114,182,0.3);
+  }
+  
+  .feature-icon-blue {
+    @apply bg-gradient-to-br from-provider-blue to-provider-blue-dark;
+    box-shadow: 0 16px 32px rgba(59,130,246,0.3);
+  }
+  
+  .feature-icon-teal {
+    @apply bg-gradient-to-br from-provider-green to-provider-green-dark;
+    box-shadow: 0 16px 32px rgba(16,185,129,0.3);
+  }
+  
+  .feature-icon-provider-purple {
+    @apply bg-gradient-to-br from-provider-purple to-provider-purple-dark;
+    box-shadow: 0 16px 32px rgba(139,92,246,0.3);
+  }
+  
+  .feature-icon-amber {
+    @apply bg-gradient-to-br from-provider-amber to-provider-amber-dark;
+    box-shadow: 0 16px 32px rgba(245,158,11,0.3);
+  }
+  
+  .feature-icon-cyan {
+    @apply bg-gradient-to-br from-provider-cyan to-provider-cyan-dark;
+    box-shadow: 0 16px 32px rgba(6,182,212,0.3);
+  }
+  
+  .feature-icon-provider-pink {
+    @apply bg-gradient-to-br from-provider-pink to-provider-pink-dark;
+    box-shadow: 0 16px 32px rgba(236,72,153,0.3);
+  }
+  
+  /* ===== JOURNEY ICONS ===== */
+  .journey-icon {
+    @apply w-28 h-28 md:w-32 md:h-32 rounded-[32px] flex items-center justify-center text-5xl md:text-6xl;
+    box-shadow: 0 32px 64px var(--shadow-color);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
