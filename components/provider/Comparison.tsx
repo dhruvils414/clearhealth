@@ -2,66 +2,106 @@
 
 import { motion } from 'framer-motion'
 
-const traditionalItems = [
-  'Insurance paperwork daily',
-  'Prior authorization battles',
-  'Claim denials and appeals',
-  'Quotas and time pressure',
-  '90-day payment cycles',
-]
-
-const clearpathItems = [
-  'Zero insurance forms',
-  'Direct pay — no middlemen',
-  'One price, one payment',
-  'You set the pace',
-  'Claim payment anytime',
+const comparisonData = [
+  {
+    category: 'Get paid',
+    traditional: '60-90 days',
+    clearpath: 'Withdraw anytime',
+  },
+  {
+    category: 'Prior authorizations',
+    traditional: '43/week average',
+    clearpath: 'Zero',
+  },
+  {
+    category: 'Claim denials to fight',
+    traditional: 'Constant',
+    clearpath: 'None',
+  },
+  {
+    category: 'Admin staff needed',
+    traditional: '2-4 per physician',
+    clearpath: 'Zero',
+  },
+  {
+    category: 'Schedule control',
+    traditional: 'Corporate mandates',
+    clearpath: '100% yours',
+  },
 ]
 
 export default function ProviderComparison() {
   return (
     <section className="px-4 mb-24 md:mb-32 max-w-5xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-6">
-        {/* Traditional */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+      {/* Header */}
+      <div className="text-center mb-12">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gray-100 rounded-[32px] p-8 md:p-10"
+          className="section-label gradient-text-purple"
         >
-          <h3 className="text-2xl font-bold text-gray-400 mb-6">Traditional Practice</h3>
-          <ul className="space-y-4">
-            {traditionalItems.map((item) => (
-              <li key={item} className="flex items-center gap-3 text-gray-500">
-                <span className="w-7 h-7 bg-red-100 rounded-full flex items-center justify-center text-red-500 font-bold text-sm flex-shrink-0">✕</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-        
-        {/* ClearPath */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          The Math
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="bg-black rounded-[32px] p-8 md:p-10 relative overflow-hidden"
+          className="section-title text-gray-900"
         >
-          <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 80% 80% at 100% 100%, rgba(16,185,129,0.2) 0%, transparent 60%)' }} />
-          <div className="relative z-10">
-            <h3 className="text-2xl font-bold gradient-text-provider mb-6">ClearPath</h3>
-            <ul className="space-y-4">
-              {clearpathItems.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-white">
-                  <span className="w-7 h-7 bg-provider-green/20 rounded-full flex items-center justify-center text-provider-green font-bold text-sm flex-shrink-0">✓</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </motion.div>
+          Insurance practice vs. ClearPath
+        </motion.h2>
       </div>
+
+      {/* Comparison Table */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="bg-white border border-gray-200 rounded-[32px] overflow-hidden"
+      >
+        {/* Header Row */}
+        <div className="grid grid-cols-3 bg-gray-50 border-b border-gray-200">
+          <div className="p-5 md:p-6">
+            <span className="text-gray-400 text-sm font-medium"></span>
+          </div>
+          <div className="p-5 md:p-6 text-center border-l border-gray-200">
+            <span className="text-gray-500 font-semibold">Traditional Practice</span>
+          </div>
+          <div className="p-5 md:p-6 text-center bg-black">
+            <span className="text-white font-semibold">ClearPath</span>
+          </div>
+        </div>
+
+        {/* Data Rows */}
+        {comparisonData.map((row, index) => (
+          <div key={row.category} className={`grid grid-cols-3 ${index < comparisonData.length - 1 ? 'border-b border-gray-100' : ''}`}>
+            <div className="p-5 md:p-6">
+              <span className="text-gray-700 font-medium text-sm md:text-base">{row.category}</span>
+            </div>
+            <div className="p-5 md:p-6 text-center border-l border-gray-100 flex items-center justify-center">
+              <span className="text-gray-400 text-sm md:text-base">{row.traditional}</span>
+            </div>
+            <div className="p-5 md:p-6 text-center bg-black/[0.02] flex items-center justify-center">
+              <span className="text-provider-green font-semibold text-sm md:text-base">{row.clearpath}</span>
+            </div>
+          </div>
+        ))}
+      </motion.div>
+
+      {/* Bottom CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+        className="text-center mt-10"
+      >
+        <p className="text-gray-500 text-lg mb-4">
+          Less overhead. More take-home. More time for patients.
+        </p>
+      </motion.div>
     </section>
   )
 }

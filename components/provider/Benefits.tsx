@@ -1,58 +1,102 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 
-const benefits = [
+const soloBenefits = [
   {
-    icon: '📄',
-    title: 'Zero insurance paperwork',
-    description: 'No prior auths. No claim denials. No coding headaches. Direct pay only.',
-    iconClass: 'feature-icon-blue',
-  },
-  {
-    icon: '📅',
-    title: 'Your schedule, your rules',
-    description: 'Set your own hours. Block time when you need it. No corporate mandates.',
+    icon: '💵',
+    title: 'Keep 70% of every visit',
+    description: 'Patient pays, you get 70% deposited same-day. No hidden fees.',
     iconClass: 'feature-icon-teal',
   },
   {
-    icon: '⏱️',
-    title: 'You decide visit length',
-    description: '15 minutes or 45 — you choose what your patients need. No quotas.',
-    iconClass: 'feature-icon-provider-purple',
-  },
-  {
-    icon: '💰',
-    title: 'Simple flat-fee payment',
-    description: 'Claim your earnings anytime after each visit. No waiting 90 days.',
+    icon: '🔓',
+    title: 'Stay independent',
+    description: 'No employment contracts. No exclusivity. Your practice, your terms.',
     iconClass: 'feature-icon-amber',
   },
   {
+    icon: '📅',
+    title: 'Set your own schedule',
+    description: 'Work 5 hours a week or 50. Block time off instantly.',
+    iconClass: 'feature-icon-provider-purple',
+  },
+  {
     icon: '👥',
-    title: 'We bring you patients',
-    description: 'Families find you through ClearPath. No marketing needed.',
+    title: 'We send you patients',
+    description: 'No marketing needed. Patients find you through ClearPath.',
     iconClass: 'feature-icon-cyan',
   },
   {
-    icon: '❤️',
-    title: 'Love medicine again',
-    description: 'Remember why you became a doctor. We handle everything else.',
+    icon: '📄',
+    title: 'Zero insurance paperwork',
+    description: 'No prior auths. No claims. We handle billing, you handle care.',
+    iconClass: 'feature-icon-blue',
+  },
+  {
+    icon: '🤖',
+    title: 'AI does the busywork',
+    description: 'Patient summaries, chart prep, message drafts — AI handles it.',
+    iconClass: 'feature-icon-provider-pink',
+  },
+]
+
+const practiceBenefits = [
+  {
+    icon: '💵',
+    title: 'Your practice keeps 70%',
+    description: 'Each visit, 70% goes to your practice. Pay your doctors however you want.',
+    iconClass: 'feature-icon-teal',
+  },
+  {
+    icon: '👥',
+    title: 'Grow your patient base',
+    description: 'We send patients to your doctors. Fill schedules without marketing spend.',
+    iconClass: 'feature-icon-cyan',
+  },
+  {
+    icon: '🏥',
+    title: 'Add your whole team',
+    description: 'Create profiles for each doctor. You control their availability and services.',
+    iconClass: 'feature-icon-blue',
+  },
+  {
+    icon: '📊',
+    title: 'Practice dashboard',
+    description: 'See all bookings, earnings, and doctor performance in one place.',
+    iconClass: 'feature-icon-provider-purple',
+  },
+  {
+    icon: '📄',
+    title: 'Zero insurance paperwork',
+    description: 'Direct-pay only. No prior auths, no claims, no denials to fight.',
+    iconClass: 'feature-icon-amber',
+  },
+  {
+    icon: '🤖',
+    title: 'AI for your whole team',
+    description: 'Every doctor gets AI summaries, chart prep, and message drafts.',
     iconClass: 'feature-icon-provider-pink',
   },
 ]
 
 export default function ProviderBenefits() {
+  const [activeTab, setActiveTab] = useState<'solo' | 'practice'>('solo')
+  
+  const benefits = activeTab === 'solo' ? soloBenefits : practiceBenefits
+  
   return (
     <section className="px-4 mb-24 md:mb-32 max-w-6xl mx-auto">
       {/* Header */}
-      <div className="text-center mb-12 md:mb-16">
+      <div className="text-center mb-10">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="section-label gradient-text-teal"
         >
-          Why ClearPath
+          Why Join ClearPath
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -61,12 +105,44 @@ export default function ProviderBenefits() {
           transition={{ delay: 0.1 }}
           className="section-title text-gray-900"
         >
-          Built for providers
+          Built for how you work
         </motion.h2>
       </div>
       
+      {/* Tabs */}
+      <div className="flex justify-center mb-10">
+        <div className="inline-flex bg-gray-100 rounded-full p-1.5">
+          <button
+            onClick={() => setActiveTab('solo')}
+            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${
+              activeTab === 'solo'
+                ? 'bg-black text-white'
+                : 'text-gray-600 hover:text-gray-900'
+            }`}
+          >
+            Individuals
+          </button>
+          <button
+            onClick={() => setActiveTab('practice')}
+            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${
+              activeTab === 'practice'
+                ? 'bg-black text-white'
+                : 'text-gray-600 hover:text-gray-900'
+            }`}
+          >
+            Practices
+          </button>
+        </div>
+      </div>
+      
       {/* Benefits Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <motion.div 
+        key={activeTab}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
+      >
         {benefits.map((benefit, index) => (
           <motion.div
             key={benefit.title}
@@ -87,7 +163,7 @@ export default function ProviderBenefits() {
             </p>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

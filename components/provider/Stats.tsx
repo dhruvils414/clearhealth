@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion'
 
 const stats = [
-  { value: '0', label: 'Insurance forms', gradient: 'gradient-text-blue' },
-  { value: '🤖', label: 'AI-powered tools', gradient: 'gradient-text-teal' },
-  { value: 'You', label: 'Set visit length', gradient: 'gradient-text-purple' },
-  { value: 'Fast', label: 'Claim payment anytime', gradient: 'gradient-text-amber' },
+  { value: '70%', label: 'You keep', gradient: 'gradient-text-teal' },
+  { value: '$0', label: 'Paperwork', gradient: 'gradient-text-blue' },
+  { value: 'You', label: 'Set schedule', gradient: 'gradient-text-purple' },
+  { value: 'Anytime', label: 'Withdraw', gradient: 'gradient-text-amber' },
 ]
 
 export default function ProviderStats() {

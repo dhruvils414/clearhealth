@@ -73,10 +73,10 @@ export default function PatientServices() {
         >
           <div className="text-5xl md:text-6xl mb-5">💪</div>
           <h3 className="text-xl md:text-2xl font-extrabold text-white mb-2">Physical Wellness</h3>
-          <p className="text-white/85 text-sm md:text-base">PT, movement, recovery — stay strong.</p>
+          <p className="text-white/85 text-sm md:text-base">PT, OT, movement — stay strong at every age.</p>
         </motion.div>
         
-        {/* Care Coordination - Large */}
+        {/* Telehealth - Large */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -84,19 +84,19 @@ export default function PatientServices() {
           transition={{ delay: 0.3 }}
           className="col-span-12 md:col-span-8 bg-gray-50 border border-gray-100 rounded-[32px] p-8 md:p-12 flex items-center justify-between relative overflow-hidden"
         >
-          <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 50% 50% at 100% 50%, rgba(244,114,182,0.15) 0%, transparent 70%)' }} />
+          <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 50% 50% at 100% 50%, rgba(59,130,246,0.12) 0%, transparent 70%)' }} />
           <div className="relative z-10 max-w-sm">
-            <span className="inline-block bg-patient-pink/15 text-patient-pink text-sm font-semibold px-4 py-2 rounded-full mb-4">
-              Care Coordination
+            <span className="inline-block bg-blue-500/15 text-blue-600 text-sm font-semibold px-4 py-2 rounded-full mb-4">
+              Telehealth
             </span>
             <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3" style={{ letterSpacing: '-0.5px' }}>
-              We handle the complexity
+              Care from anywhere
             </h3>
             <p className="text-gray-600 text-sm md:text-base">
-              Need a specialist? We find them, book them, and keep everyone in sync.
+              Video visits with your doctor — no commute, no waiting room.
             </p>
           </div>
-          <div className="text-6xl md:text-8xl opacity-80 hidden md:block">📋</div>
+          <div className="text-6xl md:text-8xl opacity-80 hidden md:block">📱</div>
         </motion.div>
       </div>
     </section>

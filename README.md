@@ -147,4 +147,3 @@ Proprietary - ClearPath Health
 ---
 
 Built with ❤️ for ClearPath Health
-# clearhealth

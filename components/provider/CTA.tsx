@@ -18,8 +18,8 @@ export default function ProviderCTA() {
             className="text-4xl md:text-[72px] font-extrabold text-white mb-6 leading-tight"
             style={{ letterSpacing: '-3px' }}
           >
-            Ready to practice<br />
-            <span className="gradient-text-provider">differently?</span>
+            Ready to join<br />
+            <span className="gradient-text-provider">ClearPath?</span>
           </motion.h2>
           
           <motion.p
@@ -27,32 +27,44 @@ export default function ProviderCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg md:text-[22px] text-white/40 mb-12"
+            className="text-lg md:text-[22px] text-white/40 mb-12 max-w-xl mx-auto"
           >
-            Join the providers who've rediscovered why they love medicine.
+            Whether you're a solo provider or a growing practice — we're ready when you are.
           </motion.p>
           
-          <motion.button
+          {/* Two CTA Buttons */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="bg-provider-green text-black font-extrabold py-6 px-16 rounded-full text-xl transition-all duration-300"
-            style={{ boxShadow: '0 0 100px rgba(16,185,129,0.6)' }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            Apply to join
-          </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-provider-green text-black font-extrabold py-5 px-10 rounded-full text-lg transition-all duration-300"
+              style={{ boxShadow: '0 0 80px rgba(16,185,129,0.5)' }}
+            >
+              Join as Individual
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-white/10 hover:bg-white/15 text-white font-bold py-5 px-10 rounded-full text-lg transition-all duration-300 border border-white/20"
+            >
+              Register Your Practice
+            </motion.button>
+          </motion.div>
           
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="text-white/25 mt-6"
+            className="text-white/25 mt-8"
           >
-            Review within 48 hours · No commitment
+            Approved within 48 hours · No long-term commitment
           </motion.p>
         </div>
       </div>
