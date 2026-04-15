@@ -34,9 +34,9 @@ const journeySteps = [
 
 export default function PatientJourney() {
   return (
-    <section className="px-4 py-24 md:py-32 max-w-5xl mx-auto">
+    <section className="px-4 py-10 md:py-14 max-w-5xl mx-auto">
       {/* Header */}
-      <div className="text-center mb-12 md:mb-16">
+      <div className="text-center mb-8 md:mb-10">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

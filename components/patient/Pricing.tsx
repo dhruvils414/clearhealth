@@ -11,14 +11,14 @@ const pricingTiers = [
 
 export default function PatientPricing() {
   return (
-    <section className="px-4 mb-24 md:mb-32">
+    <section className="px-4 mb-10 md:mb-14">
       <div className="bg-black rounded-[48px] p-8 md:p-16 relative overflow-hidden max-w-6xl mx-auto">
         {/* Background */}
         <div className="absolute inset-0 pricing-bg-patient" />
         
         <div className="relative z-10">
           {/* Header */}
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-8 md:mb-10">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

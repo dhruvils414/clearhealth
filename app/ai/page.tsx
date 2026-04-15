@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/shared/Footer'
 
@@ -92,7 +93,7 @@ function IPhoneMockup({ feature, index }: { feature: typeof aiFeatures[0], index
                 <span className="text-lg">🤖</span>
               </div>
               <div className="ml-3">
-                <p className="text-white font-semibold text-[14px]">ClearPath AI</p>
+                <p className="text-white font-semibold text-[14px]">Rivomed AI</p>
                 <p className="text-white/70 text-[11px]">Always here for you</p>
               </div>
             </div>
@@ -229,11 +230,14 @@ export default function AIPage() {
             <span className="gradient-text-patient">health assistant?</span>
           </h2>
           <p className="text-xl text-gray-500 mb-10">
-            Join ClearPath and get AI-powered care for your whole family.
+            Join Rivomed and get AI-powered care for your whole family.
           </p>
-          <button className="btn-patient text-lg px-10 py-5">
-            Get started free
-          </button>
+          <Link 
+            href="/waitlist?type=patient"
+            className="btn-patient text-lg px-10 py-5 inline-block"
+          >
+            Join the waitlist
+          </Link>
         </motion.div>
       </section>
       

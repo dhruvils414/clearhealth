@@ -49,7 +49,7 @@ const pillars = [
 
 export default function PreventiveCareHub() {
   return (
-    <section className="py-24 md:py-32 px-4 md:px-8">
+    <section className="py-10 md:py-14 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -57,7 +57,7 @@ export default function PreventiveCareHub() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="inline-flex items-center gap-2 bg-patient-green/10 text-patient-green text-sm font-semibold px-4 py-2 rounded-full mb-6">
             <span>🏥</span> Preventive Care Hub
@@ -73,7 +73,7 @@ export default function PreventiveCareHub() {
         </motion.div>
 
         {/* 6 Pillars Grid - Dark Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-10">
           {pillars.map((pillar, index) => (
             <motion.div
               key={pillar.title}
@@ -141,7 +141,7 @@ export default function PreventiveCareHub() {
               Never miss what matters.
             </h3>
             <p className="text-white/50 max-w-xl mx-auto mb-8">
-              ClearPath AI knows your family's health history, age, and risk factors. It proactively reminds you about upcoming care — and automatically reports vaccinations to your local health department.
+              Rivomed AI knows your family's health history, age, and risk factors. It proactively reminds you about upcoming care — and automatically reports vaccinations to your local health department.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {['💉 Vaccine due in 2 weeks', '🔬 Mammogram overdue', '👶 18-month checkup coming', '💊 Refill needed'].map((tag) => (

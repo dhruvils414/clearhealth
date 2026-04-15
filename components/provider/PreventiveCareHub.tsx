@@ -138,13 +138,13 @@ export default function ProviderPreventiveCareHub() {
                 Connected to public health
               </h3>
               <p className="text-gray-600">
-                ClearPath auto-reports immunization data to your local health department. No spreadsheets. No faxes. Just seamless compliance.
+                Rivomed auto-reports immunization data to your local health department. No spreadsheets. No faxes. Just seamless compliance.
               </p>
             </div>
             <div className="flex items-center gap-3 text-sm">
               <span className="bg-white px-4 py-2 rounded-full text-gray-700 font-medium shadow-sm">Your Panel</span>
               <span className="text-gray-400">→</span>
-              <span className="bg-white px-4 py-2 rounded-full text-gray-700 font-medium shadow-sm">ClearPath</span>
+              <span className="bg-white px-4 py-2 rounded-full text-gray-700 font-medium shadow-sm">Rivomed</span>
               <span className="text-gray-400">→</span>
               <span className="bg-provider-blue text-white px-4 py-2 rounded-full font-medium">Health Dept</span>
             </div>

@@ -19,7 +19,7 @@ export default function ProviderCTA() {
             style={{ letterSpacing: '-3px' }}
           >
             Ready to join<br />
-            <span className="gradient-text-provider">ClearPath?</span>
+            <span className="gradient-text-provider">Rivomed?</span>
           </motion.h2>
           
           <motion.p

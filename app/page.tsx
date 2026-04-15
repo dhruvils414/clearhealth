@@ -1,7 +1,7 @@
 import Navigation from '@/components/Navigation'
 import PatientHero from '@/components/patient/Hero'
 import PatientStats from '@/components/patient/Stats'
-import WhyClearPath from '@/components/patient/WhyClearPath'
+import WhyRivomed from '@/components/patient/WhyRivomed'
 import PatientJourney from '@/components/patient/Journey'
 import PatientServices from '@/components/patient/Services'
 import PatientPricing from '@/components/patient/Pricing'
@@ -16,7 +16,7 @@ export default function HomePage() {
       <Navigation />
       <PatientHero />
       <PatientStats />
-      <WhyClearPath />
+      <WhyRivomed />
       <PatientJourney />
       <PatientServices />
       <PatientPricing />

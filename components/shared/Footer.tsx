@@ -2,13 +2,13 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import RivomedLogo from './RivomedLogo'
 
 interface FooterProps {
   variant?: 'patient' | 'provider'
 }
 
 export default function Footer({ variant = 'patient' }: FooterProps) {
-  const gradientClass = variant === 'provider' ? 'gradient-text-provider' : 'gradient-text-patient'
   const tagline = variant === 'provider' 
     ? 'Practice medicine. Not paperwork.' 
     : 'Your family\'s health. Finally simple.'
@@ -22,9 +22,10 @@ export default function Footer({ variant = 'patient' }: FooterProps) {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className={`text-2xl font-extrabold ${gradientClass} mb-2`}>
-            ClearPath
-          </p>
+          {/* Logo */}
+          <div className="flex items-center justify-center mb-2">
+            <RivomedLogo size="lg" variant="light" />
+          </div>
           <p className="text-gray-500 mb-8">
             {tagline}
           </p>
@@ -47,7 +48,7 @@ export default function Footer({ variant = 'patient' }: FooterProps) {
           
           {/* Copyright */}
           <p className="text-xs text-gray-400">
-            © {new Date().getFullYear()} ClearPath Health. Operated by PATHSDATA LLC. All rights reserved.
+            © {new Date().getFullYear()} Rivomed. Operated by PATHSDATA LLC. All rights reserved.
           </p>
         </motion.div>
       </div>

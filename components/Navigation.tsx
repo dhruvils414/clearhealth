@@ -3,10 +3,12 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
+import RivomedLogo from './shared/RivomedLogo'
 
 export default function Navigation() {
   const pathname = usePathname()
   const isProvider = pathname === '/providers'
+  const isAI = pathname === '/ai'
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [bannerVisible, setBannerVisible] = useState(true)
@@ -14,6 +16,9 @@ export default function Navigation() {
   const patientGreen = '#4ADE80'
   const providerGreen = '#10B981'
   const accentColor = isProvider ? providerGreen : patientGreen
+  
+  // Get waitlist URL based on current page
+  const waitlistUrl = isProvider ? '/waitlist?type=provider' : '/waitlist?type=patient'
   
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768)
@@ -33,21 +38,29 @@ export default function Navigation() {
           right: 0,
           zIndex: 10000,
           background: 'linear-gradient(90deg, #3B82F6 0%, #8B5CF6 50%, #10B981 100%)',
-          padding: '10px 16px',
+          padding: isMobile ? '8px 12px' : '10px 16px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '8px',
+          gap: '4px',
         }}>
           <span style={{
-            fontSize: '13px',
+            fontSize: isMobile ? '11px' : '13px',
             fontWeight: 500,
             color: '#ffffff',
             textAlign: 'center',
+            lineHeight: 1.4,
           }}>
-            🚀 <strong>Coming Soon</strong> — Beta launching soon. A PATHSDATA LLC venture.{' '}
-            <Link href="/providers" style={{ color: '#ffffff', textDecoration: 'underline' }}>
-              Join the waitlist →
+            🚀 <strong>Coming Soon</strong>{isMobile ? ' — ' : ' — Beta launching soon. '}<Link 
+              href="/waitlist"
+              style={{ 
+                color: '#ffffff', 
+                textDecoration: 'underline',
+                fontSize: isMobile ? '11px' : '13px',
+                fontWeight: 600,
+              }}
+            >
+              Join waitlist →
             </Link>
           </span>
           <button
@@ -56,10 +69,11 @@ export default function Navigation() {
               background: 'transparent',
               border: 'none',
               color: 'rgba(255,255,255,0.7)',
-              fontSize: '18px',
+              fontSize: isMobile ? '16px' : '18px',
               cursor: 'pointer',
               padding: '0 4px',
-              marginLeft: '8px',
+              marginLeft: '4px',
+              flexShrink: 0,
             }}
           >
             ×
@@ -69,42 +83,37 @@ export default function Navigation() {
       
       <nav style={{
         position: 'fixed',
-        top: bannerVisible ? '44px' : 0,
+        top: bannerVisible ? (isMobile ? '36px' : '44px') : 0,
         left: 0,
         right: 0,
         zIndex: 9999,
-        padding: '16px',
+        padding: isMobile ? '12px 16px' : '16px 24px',
         transition: 'top 0.3s ease',
       }}>
         <div style={{
-          maxWidth: '1152px',
+          maxWidth: '100%',
+          width: '100%',
           margin: '0 auto',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          background: 'rgba(0, 0, 0, 0.85)',
+          background: 'rgba(0, 0, 0, 0.92)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
           border: '1px solid rgba(255, 255, 255, 0.1)',
           borderRadius: '9999px',
-          padding: '12px 24px',
+          padding: isMobile ? '14px 24px' : '18px 48px',
         }}>
           {/* Logo */}
           <Link 
             href="/" 
             style={{
-              fontSize: '20px',
-              fontWeight: 800,
-              background: isProvider 
-                ? 'linear-gradient(135deg, #3B82F6 0%, #10B981 50%, #8B5CF6 100%)'
-                : 'linear-gradient(135deg, #4ADE80 0%, #A78BFA 40%, #FB923C 70%, #F472B6 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
+              display: 'flex',
+              alignItems: 'center',
               textDecoration: 'none',
             }}
           >
-            ClearPath
+            <RivomedLogo size={isMobile ? 'md' : 'lg'} variant="dark" />
           </Link>
           
           {/* Desktop Nav Links */}
@@ -112,14 +121,14 @@ export default function Navigation() {
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '24px',
+              gap: '40px',
             }}>
               <Link 
                 href="/" 
                 style={{
-                  fontSize: '14px',
-                  fontWeight: 500,
-                  color: pathname === '/' ? '#ffffff' : 'rgba(255, 255, 255, 0.5)',
+                  fontSize: '16px',
+                  fontWeight: 600,
+                  color: pathname === '/' ? '#ffffff' : 'rgba(255, 255, 255, 0.65)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -129,9 +138,9 @@ export default function Navigation() {
               <Link 
                 href="/providers" 
                 style={{
-                  fontSize: '14px',
-                  fontWeight: 500,
-                  color: pathname === '/providers' ? '#ffffff' : 'rgba(255, 255, 255, 0.5)',
+                  fontSize: '16px',
+                  fontWeight: 600,
+                  color: pathname === '/providers' ? '#ffffff' : 'rgba(255, 255, 255, 0.65)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -141,28 +150,29 @@ export default function Navigation() {
               <Link 
                 href="/ai" 
                 style={{
-                  fontSize: '14px',
-                  fontWeight: 500,
-                  color: pathname === '/ai' ? '#ffffff' : 'rgba(255, 255, 255, 0.5)',
+                  fontSize: '16px',
+                  fontWeight: 600,
+                  color: pathname === '/ai' ? '#ffffff' : 'rgba(255, 255, 255, 0.65)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
               >
                 AI
               </Link>
-              <button style={{
-                background: accentColor,
-                color: '#000000',
-                fontSize: '14px',
-                fontWeight: 700,
-                padding: '10px 20px',
-                borderRadius: '9999px',
-                border: 'none',
-                cursor: 'pointer',
-                transition: 'transform 0.2s',
-              }}>
-                Get Started
-              </button>
+              <Link 
+                href={waitlistUrl}
+                style={{
+                  background: accentColor,
+                  color: '#000000',
+                  fontSize: '16px',
+                  fontWeight: 700,
+                  padding: '14px 32px',
+                  borderRadius: '9999px',
+                  textDecoration: 'none',
+                  transition: 'transform 0.2s',
+                }}>
+                Join Waitlist
+              </Link>
             </div>
           )}
           
@@ -240,19 +250,22 @@ export default function Navigation() {
             >
               AI
             </Link>
-            <button style={{
-              background: accentColor,
-              color: '#000000',
-              fontSize: '14px',
-              fontWeight: 700,
-              padding: '14px 24px',
-              borderRadius: '9999px',
-              border: 'none',
-              cursor: 'pointer',
-              marginTop: '8px',
-            }}>
-              Get Started
-            </button>
+            <Link 
+              href={waitlistUrl}
+              onClick={() => setMobileMenuOpen(false)}
+              style={{
+                background: accentColor,
+                color: '#000000',
+                fontSize: '14px',
+                fontWeight: 700,
+                padding: '14px 24px',
+                borderRadius: '9999px',
+                textDecoration: 'none',
+                marginTop: '8px',
+                textAlign: 'center',
+              }}>
+              Join Waitlist
+            </Link>
           </div>
         )}
       </nav>

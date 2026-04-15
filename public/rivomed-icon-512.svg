@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rivomed Icon - App Icon Size (512x512) -->
+  
+  <!-- Green rounded square -->
+  <rect x="56" y="56" width="400" height="400" rx="80" fill="#4ADE80"/>
+  
+  <!-- R letter -->
+  <text x="256" y="290" text-anchor="middle" fill="#050505" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="240" font-weight="900">R</text>
+  
+  <!-- Heartbeat pulse -->
+  <path d="M80 360 L140 360 L180 280 L256 400 L332 300 L372 360 L432 360" 
+        fill="none" stroke="#050505" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

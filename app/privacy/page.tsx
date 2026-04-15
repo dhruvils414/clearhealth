@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
             <div className="prose prose-lg max-w-none text-gray-700">
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Introduction</h2>
               <p>
-                ClearPath Health ("we," "our," or "us") is currently operated by PATHSDATA LLC. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or express interest in our services.
+                Rivomed ("we," "our," or "us") is currently operated by PATHSDATA LLC. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or express interest in our services.
               </p>
               <p>
                 Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
@@ -75,7 +75,7 @@ export default function PrivacyPolicy() {
                 <li>Improve our website and services</li>
                 <li>Analyze usage patterns and trends</li>
                 <li>Comply with legal obligations</li>
-                <li>Communicate with you about opportunities to join ClearPath Health</li>
+                <li>Communicate with you about opportunities to join Rivomed</li>
               </ul>
               
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">4. Sharing Your Information</h2>
@@ -127,7 +127,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">11. Contact Us</h2>
               <p>If you have questions about this Privacy Policy, please contact us:</p>
               <div className="bg-gray-50 rounded-2xl p-6 mt-4">
-                <p className="font-semibold text-gray-900">ClearPath Health</p>
+                <p className="font-semibold text-gray-900">Rivomed</p>
                 <p>Operated by PATHSDATA LLC</p>
                 <p className="mt-2">Email: privacy@clearpathhealth.com</p>
               </div>

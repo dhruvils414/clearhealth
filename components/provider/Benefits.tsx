@@ -25,7 +25,7 @@ const soloBenefits = [
   {
     icon: '👥',
     title: 'We send you patients',
-    description: 'No marketing needed. Patients find you through ClearPath.',
+    description: 'No marketing needed. Patients find you through Rivomed.',
     iconClass: 'feature-icon-cyan',
   },
   {
@@ -96,7 +96,7 @@ export default function ProviderBenefits() {
           viewport={{ once: true }}
           className="section-label gradient-text-teal"
         >
-          Why Join ClearPath
+          Why Join Rivomed
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 
 export default function PatientServices() {
   return (
-    <section className="px-4 mb-24 md:mb-32 max-w-6xl mx-auto">
+    <section className="px-4 mb-10 md:mb-14 max-w-6xl mx-auto">
       {/* Header */}
-      <div className="text-center mb-12 md:mb-16">
+      <div className="text-center mb-8 md:mb-10">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -26,7 +26,7 @@ export default function TermsOfService() {
             <div className="prose prose-lg max-w-none text-gray-700">
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Agreement to Terms</h2>
               <p>
-                These Terms of Service ("Terms") govern your access to and use of the ClearPath Health website and services, currently operated by PATHSDATA LLC ("Company," "we," "our," or "us").
+                These Terms of Service ("Terms") govern your access to and use of the Rivomed website and services, currently operated by PATHSDATA LLC ("Company," "we," "our," or "us").
               </p>
               <p>
                 By accessing or using our website, you agree to be bound by these Terms. If you disagree with any part of the Terms, you may not access our website or services.
@@ -34,7 +34,7 @@ export default function TermsOfService() {
               
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">2. Description of Service</h2>
               <p>
-                ClearPath Health is a healthcare marketplace platform preparing for beta launch. Our website currently provides:
+                Rivomed is a healthcare marketplace platform preparing for beta launch. Our website currently provides:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Information about our planned services</li>
@@ -43,7 +43,7 @@ export default function TermsOfService() {
                 <li>Educational content about direct-pay healthcare</li>
               </ul>
               <p className="mt-4">
-                <strong>Note:</strong> ClearPath Health is not yet providing healthcare services. Information collected through our website is for waitlist registration and launch planning purposes.
+                <strong>Note:</strong> Rivomed is not yet providing healthcare services. Information collected through our website is for waitlist registration and launch planning purposes.
               </p>
               
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">3. User Representations</h2>
@@ -58,7 +58,7 @@ export default function TermsOfService() {
               
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">4. Clinician and Practice Applications</h2>
               <p>
-                If you submit an application to join ClearPath Health as an individual clinician or practice, you additionally represent that:
+                If you submit an application to join Rivomed as an individual clinician or practice, you additionally represent that:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>All credentials and license information provided are accurate</li>
@@ -67,7 +67,7 @@ export default function TermsOfService() {
                 <li>You are authorized to represent your practice if applying on behalf of a practice</li>
               </ul>
               <p className="mt-4">
-                Submission of an application does not guarantee acceptance into the ClearPath Health network. We reserve the right to approve or deny applications at our sole discretion.
+                Submission of an application does not guarantee acceptance into the Rivomed network. We reserve the right to approve or deny applications at our sole discretion.
               </p>
               
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">5. Intellectual Property</h2>
@@ -138,7 +138,7 @@ export default function TermsOfService() {
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">14. Contact Information</h2>
               <p>For questions about these Terms of Service, please contact us:</p>
               <div className="bg-gray-50 rounded-2xl p-6 mt-4">
-                <p className="font-semibold text-gray-900">ClearPath Health</p>
+                <p className="font-semibold text-gray-900">Rivomed</p>
                 <p>Operated by PATHSDATA LLC</p>
                 <p className="mt-2">Email: legal@clearpathhealth.com</p>
               </div>

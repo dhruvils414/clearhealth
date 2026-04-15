@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function PatientTestimonial() {
   return (
-    <section className="px-4 md:px-8 mb-24 md:mb-32 text-center max-w-4xl mx-auto">
+    <section className="px-4 md:px-8 mb-10 md:mb-14 text-center max-w-4xl mx-auto">
       {/* Stars */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

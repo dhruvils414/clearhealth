@@ -50,7 +50,7 @@ export default function ProviderComparison() {
           transition={{ delay: 0.1 }}
           className="section-title text-gray-900"
         >
-          Insurance practice vs. ClearPath
+          Insurance practice vs. Rivomed
         </motion.h2>
       </div>
 
@@ -70,7 +70,7 @@ export default function ProviderComparison() {
             <span className="text-gray-500 font-semibold">Traditional Practice</span>
           </div>
           <div className="p-5 md:p-6 text-center bg-black">
-            <span className="text-white font-semibold">ClearPath</span>
+            <span className="text-white font-semibold">Rivomed</span>
           </div>
         </div>
 

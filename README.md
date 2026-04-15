@@ -1,4 +1,4 @@
-# ClearPath Health - Landing Pages
+# Rivomed - Landing Pages
 
 A unicorn-level landing page experience built with Next.js 14, Tailwind CSS, and Framer Motion.
 
@@ -38,7 +38,7 @@ clearpath-health/
 │   │   ├── HowItWorks.tsx   # 4 steps + AI features integrated
 │   │   ├── Benefits.tsx     # 6 benefit cards
 │   │   ├── Types.tsx        # 4 provider types
-│   │   ├── Comparison.tsx   # Traditional vs ClearPath
+│   │   ├── Comparison.tsx   # Traditional vs Rivomed
 │   │   ├── Testimonial.tsx  # Dr. Sarah Chen quote
 │   │   └── CTA.tsx          # Apply to join
 │   └── shared/
@@ -142,8 +142,8 @@ AI is integrated into the "See patients" step:
 
 ## 📄 License
 
-Proprietary - ClearPath Health
+Proprietary - Rivomed
 
 ---
 
-Built with ❤️ for ClearPath Health
+Built with ❤️ for Rivomed

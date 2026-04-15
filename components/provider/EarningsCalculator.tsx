@@ -111,7 +111,7 @@ export default function ProviderEarningsCalculator() {
                   <span className="text-white font-bold">${service.price}</span>
                 </div>
                 <div className="flex justify-between items-center mb-3">
-                  <span className="text-white/60 text-sm">ClearPath fee (30%)</span>
+                  <span className="text-white/60 text-sm">Rivomed fee (30%)</span>
                   <span className="text-white/60">-${(service.price * 0.3).toFixed(2)}</span>
                 </div>
                 <div className="border-t border-white/10 pt-3">

@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rivomed Favicon (32x32) -->
+  
+  <!-- Green rounded square -->
+  <rect width="32" height="32" rx="6" fill="#4ADE80"/>
+  
+  <!-- R letter -->
+  <text x="16" y="20" text-anchor="middle" fill="#050505" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="900">R</text>
+  
+  <!-- Heartbeat pulse (simplified) -->
+  <path d="M4 24 L8 24 L11 18 L16 28 L21 21 L24 24 L28 24" 
+        fill="none" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
