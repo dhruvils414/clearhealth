@@ -7,6 +7,8 @@ const pricingTiers = [
   { name: 'Office Visit', price: '$79', gradient: 'gradient-text-purple' },
   { name: 'Therapy', price: '$69', gradient: 'gradient-text-orange' },
   { name: 'PT Session', price: '$69', gradient: 'gradient-text-pink' },
+  { name: 'Home Care', price: '$89', gradient: 'gradient-text-green' },
+  { name: 'House Call', price: '$109', gradient: 'gradient-text-purple' },
 ]
 
 export default function PatientPricing() {
@@ -48,7 +50,7 @@ export default function PatientPricing() {
           </div>
           
           {/* Pricing Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
@@ -76,6 +78,17 @@ export default function PatientPricing() {
             className="text-center text-white/30 mt-8 md:mt-10 text-sm md:text-base"
           >
             Same-day booking · No referrals · No approvals · No games
+          </motion.p>
+          
+          {/* Superbill Note */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-center text-white/50 mt-4 text-sm"
+          >
+            Have insurance? Get a superbill for potential reimbursement.
           </motion.p>
         </div>
       </div>

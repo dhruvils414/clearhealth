@@ -1,238 +1,115 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 
-const soloSteps = [
-  { 
-    number: '1', 
-    title: 'Apply', 
-    description: 'Quick online application. Upload your license and credentials.',
-    color: 'text-provider-blue',
-    bgColor: 'bg-provider-blue/10',
+const steps = [
+  {
+    number: '01',
+    title: 'Apply',
+    description: 'Submit your application with your license and credentials. We verify within 48 hours.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    )
   },
-  { 
-    number: '2', 
-    title: 'Set your terms', 
-    description: 'Choose your hours, services, and availability.',
-    color: 'text-provider-green',
-    bgColor: 'bg-provider-green/10',
+  {
+    number: '02',
+    title: 'Get Approved',
+    description: 'Once verified, your profile goes live. Patients see your services, availability, and transparent pricing.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    )
   },
-  { 
-    number: '3', 
-    title: 'See patients', 
-    description: 'We send you patients. AI prepares visit summaries.',
-    color: 'text-provider-purple',
-    bgColor: 'bg-provider-purple/10',
+  {
+    number: '03',
+    title: 'Patients Find You',
+    description: 'Patients in your area browse providers, see prices upfront, and choose you based on your profile and reviews.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    )
   },
-  { 
-    number: '4', 
-    title: 'Get paid', 
-    description: 'Your 70% deposited same-day. Withdraw anytime.',
-    color: 'text-provider-amber',
-    bgColor: 'bg-provider-amber/10',
+  {
+    number: '04',
+    title: 'They Book & Pay',
+    description: 'Patient books an appointment and pays upfront. No surprises for them, no chasing payments for you.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    )
   },
-]
-
-const practiceSteps = [
-  { 
-    number: '1', 
-    title: 'Register practice', 
-    description: 'Create your practice account with business details.',
-    color: 'text-provider-blue',
-    bgColor: 'bg-provider-blue/10',
+  {
+    number: '05',
+    title: 'See Patient',
+    description: 'At your office, their home, or via telehealth — you deliver care the way you want.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      </svg>
+    )
   },
-  { 
-    number: '2', 
-    title: 'Add doctor profiles', 
-    description: 'Create a profile for each doctor with their credentials and specialties.',
-    color: 'text-provider-green',
-    bgColor: 'bg-provider-green/10',
-  },
-  { 
-    number: '3', 
-    title: 'Set availability', 
-    description: 'Control each doctor\'s schedule and bookable hours.',
-    color: 'text-provider-purple',
-    bgColor: 'bg-provider-purple/10',
-  },
-  { 
-    number: '4', 
-    title: 'Get paid', 
-    description: 'Practice receives 70% same-day. Pay your doctors your way.',
-    color: 'text-provider-amber',
-    bgColor: 'bg-provider-amber/10',
-  },
+  {
+    number: '06',
+    title: 'Get Paid',
+    description: 'Your earnings hit your account within days — not 60-90 days. Withdraw anytime via Stripe.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    )
+  }
 ]
 
 export default function ProviderHowItWorks() {
-  const [activeTab, setActiveTab] = useState<'solo' | 'practice'>('solo')
-  
-  const steps = activeTab === 'solo' ? soloSteps : practiceSteps
-  
   return (
-    <section className="px-4 mb-24 md:mb-32 max-w-6xl mx-auto">
-      {/* Header */}
-      <div className="text-center mb-10">
-        <motion.p
+    <section className="py-20 sm:py-28 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Section header */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="section-label gradient-text-blue"
+          className="text-center mb-16"
         >
-          Simple Process
-        </motion.p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            How It Works
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            From application to your first payment — here's the journey.
+          </p>
+        </motion.div>
         
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="section-title text-gray-900 mb-4"
-        >
-          How it works
-        </motion.h2>
-        
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="text-lg md:text-xl text-gray-500 max-w-lg mx-auto"
-        >
-          From signup to first patient in under a week.
-        </motion.p>
-      </div>
-      
-      {/* Tabs */}
-      <div className="flex justify-center mb-10">
-        <div className="inline-flex bg-gray-100 rounded-full p-1.5">
-          <button
-            onClick={() => setActiveTab('solo')}
-            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${
-              activeTab === 'solo'
-                ? 'bg-black text-white'
-                : 'text-gray-600 hover:text-gray-900'
-            }`}
-          >
-            Individuals
-          </button>
-          <button
-            onClick={() => setActiveTab('practice')}
-            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${
-              activeTab === 'practice'
-                ? 'bg-black text-white'
-                : 'text-gray-600 hover:text-gray-900'
-            }`}
-          >
-            Practices
-          </button>
+        {/* Steps grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.number}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="relative bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 hover:shadow-md transition-all duration-300"
+            >
+              {/* Step number */}
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-4xl font-bold text-[#4ADE80]/30">{step.number}</span>
+                <div className="w-12 h-12 rounded-xl bg-[#4ADE80]/10 flex items-center justify-center text-[#4ADE80]">
+                  {step.icon}
+                </div>
+              </div>
+              
+              {/* Content */}
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
+              <p className="text-gray-600 leading-relaxed">{step.description}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
-      
-      {/* Steps */}
-      <motion.div 
-        key={activeTab}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className="grid md:grid-cols-4 gap-6 mb-16"
-      >
-        {steps.map((step, index) => (
-          <div
-            key={step.title}
-            className="relative"
-          >
-            {/* Connector line */}
-            {index < steps.length - 1 && (
-              <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-[2px] bg-gradient-to-r from-gray-200 to-gray-100" />
-            )}
-            
-            <div className="text-center relative z-10">
-              <div className={`w-20 h-20 ${step.bgColor} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                <span className={`text-4xl font-extrabold ${step.color}`} style={{ letterSpacing: '-2px' }}>
-                  {step.number}
-                </span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                {step.title}
-              </h3>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                {step.description}
-              </p>
-            </div>
-          </div>
-        ))}
-      </motion.div>
-      
-      {/* What You Need */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="bg-gray-50 rounded-[32px] p-8 md:p-10"
-      >
-        <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
-          {activeTab === 'solo' ? 'What you need to apply' : 'What your practice needs'}
-        </h3>
-        <div className="grid md:grid-cols-4 gap-6">
-          {activeTab === 'solo' ? (
-            <>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-3 shadow-sm">
-                  📜
-                </div>
-                <p className="text-gray-700 font-medium text-sm">Active medical license</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-3 shadow-sm">
-                  🛡️
-                </div>
-                <p className="text-gray-700 font-medium text-sm">Malpractice insurance</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-3 shadow-sm">
-                  🆔
-                </div>
-                <p className="text-gray-700 font-medium text-sm">NPI number</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-3 shadow-sm">
-                  🏦
-                </div>
-                <p className="text-gray-700 font-medium text-sm">Bank account for deposits</p>
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-3 shadow-sm">
-                  🏥
-                </div>
-                <p className="text-gray-700 font-medium text-sm">Business registration</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-3 shadow-sm">
-                  👨‍⚕️
-                </div>
-                <p className="text-gray-700 font-medium text-sm">Doctor licenses & NPIs</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-3 shadow-sm">
-                  🛡️
-                </div>
-                <p className="text-gray-700 font-medium text-sm">Malpractice coverage</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-3 shadow-sm">
-                  🏦
-                </div>
-                <p className="text-gray-700 font-medium text-sm">Practice bank account</p>
-              </div>
-            </>
-          )}
-        </div>
-      </motion.div>
     </section>
   )
 }

@@ -6,7 +6,6 @@ import PatientJourney from '@/components/patient/Journey'
 import PatientServices from '@/components/patient/Services'
 import PatientPricing from '@/components/patient/Pricing'
 import PreventiveCareHub from '@/components/patient/PreventiveCareHub'
-import PatientTestimonial from '@/components/patient/Testimonial'
 import PatientCTA from '@/components/patient/CTA'
 import Footer from '@/components/shared/Footer'
 
@@ -21,7 +20,6 @@ export default function HomePage() {
       <PatientServices />
       <PatientPricing />
       <PreventiveCareHub />
-      <PatientTestimonial />
       <PatientCTA />
       <Footer variant="patient" />
     </main>

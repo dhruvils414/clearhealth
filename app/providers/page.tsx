@@ -1,13 +1,11 @@
 import Navigation from '@/components/Navigation'
 import ProviderHero from '@/components/provider/Hero'
-import ProviderStats from '@/components/provider/Stats'
-import ProviderEarningsCalculator from '@/components/provider/EarningsCalculator'
+import ThreePaths from '@/components/provider/ThreePaths'
 import ProviderHowItWorks from '@/components/provider/HowItWorks'
+import Requirements from '@/components/provider/Requirements'
 import ProviderBenefits from '@/components/provider/Benefits'
-import ProviderComparison from '@/components/provider/Comparison'
-import ProviderAITools from '@/components/provider/AITools'
-import ProviderComingSoon from '@/components/provider/ComingSoon'
-import ProviderTestimonial from '@/components/provider/Testimonial'
+import FoundingProvider from '@/components/provider/FoundingProvider'
+import ProviderFAQ from '@/components/provider/FAQ'
 import ProviderCTA from '@/components/provider/CTA'
 import Footer from '@/components/shared/Footer'
 
@@ -16,14 +14,12 @@ export default function ProvidersPage() {
     <main className="min-h-screen bg-white">
       <Navigation />
       <ProviderHero />
-      <ProviderStats />
-      <ProviderEarningsCalculator />
+      <ThreePaths />
       <ProviderHowItWorks />
+      <Requirements />
       <ProviderBenefits />
-      <ProviderComparison />
-      <ProviderAITools />
-      <ProviderComingSoon />
-      <ProviderTestimonial />
+      <FoundingProvider />
+      <ProviderFAQ />
       <ProviderCTA />
       <Footer variant="provider" />
     </main>

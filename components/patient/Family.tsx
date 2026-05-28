@@ -58,7 +58,7 @@ export default function PatientFamily() {
           >
             <div 
               className={`w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 ${member.bg} rounded-full flex items-center justify-center text-2xl sm:text-4xl md:text-5xl mb-2 sm:mb-3`}
-              style={{ boxShadow: `0 12px 24px sm:0 20px 40px ${member.shadow}` }}
+              style={{ boxShadow: `0 12px 24px ${member.shadow}` }}
             >
               {member.emoji}
             </div>
