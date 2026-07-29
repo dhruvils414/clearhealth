@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 
 const stats = [
-  { value: '70%', label: 'You keep', gradient: 'gradient-text-teal' },
+  { value: '3 mo', label: 'Fee-free start', gradient: 'gradient-text-teal' },
   { value: '$0', label: 'Paperwork', gradient: 'gradient-text-blue' },
   { value: 'You', label: 'Set schedule', gradient: 'gradient-text-purple' },
   { value: 'Anytime', label: 'Withdraw', gradient: 'gradient-text-amber' },

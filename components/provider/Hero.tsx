@@ -25,7 +25,7 @@ export default function ProviderHero() {
           className="inline-flex items-center gap-2 sm:gap-3 bg-[#4ADE80] text-black text-xs sm:text-sm font-bold px-5 sm:px-6 py-2 sm:py-2.5 rounded-full mb-6 sm:mb-8 uppercase tracking-wider"
         >
           <span className="w-2 h-2 bg-black rounded-full animate-pulse" />
-          Now Recruiting Providers
+          Now Recruiting · Launching Soon in Atlanta
         </motion.div>
         
         {/* Headline */}

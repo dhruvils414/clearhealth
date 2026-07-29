@@ -28,7 +28,6 @@ function WaitlistForm() {
     phone: '',
     specialty: '',
     licenseState: '',
-    npi: '',
     practiceName: '',
     providerCount: '',
     zipCode: '',
@@ -61,7 +60,6 @@ function WaitlistForm() {
         ...(type === 'provider' && {
           specialty: formData.specialty,
           licenseState: formData.licenseState,
-          npi: formData.npi || undefined,
         }),
         ...(type === 'practice' && {
           practiceName: formData.practiceName,
@@ -104,7 +102,7 @@ function WaitlistForm() {
     },
     provider: {
       title: 'Join as a Provider',
-      subtitle: 'Keep 70% • Same-day pay • Zero paperwork',
+      subtitle: '3 months fee-free • Same-day pay • Zero paperwork',
       color: '#3B82F6',
       gradient: 'from-blue-500 to-cyan-500',
       bgGradient: 'rgba(59,130,246,0.15)',
@@ -255,6 +253,9 @@ function WaitlistForm() {
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-400 focus:ring-0 outline-none transition-colors text-gray-900"
                   placeholder="(555) 123-4567"
                 />
+                <p className="text-xs text-gray-400 mt-2">
+                  If you provide a number, we may text or call you about your waitlist status and launch. Message and data rates may apply. Reply STOP to opt out at any time.
+                </p>
               </div>
 
               {/* Provider-specific fields */}
@@ -296,20 +297,6 @@ function WaitlistForm() {
                       </select>
                     </div>
                   </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      NPI <span className="text-gray-400 font-normal">(optional)</span>
-                    </label>
-                    <input
-                      type="text"
-                      name="npi"
-                      value={formData.npi}
-                      onChange={handleChange}
-                      maxLength={10}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-400 focus:ring-0 outline-none transition-colors text-gray-900"
-                      placeholder="10-digit NPI"
-                    />
-                  </div>
                 </>
               )}
 
@@ -347,7 +334,11 @@ function WaitlistForm() {
                 </>
               )}
 
-              {/* Patient-specific fields */}
+              {/* Patient-specific fields
+                  DO NOT add clinical fields here — no conditions, symptoms, medications,
+                  insurance, or "what brings you in?" Collecting health information would
+                  bring this form into HIPAA scope, which we are not set up for pre-launch
+                  (no BAAs with vendors, no encryption-at-rest guarantees). Zip code only. */}
               {type === 'patient' && (
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -384,11 +375,14 @@ function WaitlistForm() {
                 {loading ? 'Joining...' : 'Join the Waitlist'}
               </button>
 
-              <p className="text-xs text-gray-400 text-center">
+              <p className="text-xs text-gray-400 text-center leading-relaxed">
                 By joining, you agree to our{' '}
                 <Link href="/terms" className="underline hover:text-gray-600">Terms</Link>
                 {' '}and{' '}
-                <Link href="/privacy" className="underline hover:text-gray-600">Privacy Policy</Link>
+                <Link href="/privacy" className="underline hover:text-gray-600">Privacy Policy</Link>.
+                {' '}Joining the waitlist is an expression of interest — it is not an agreement to use Rivomed
+                and does not create any obligation for you or for us. Rivomed is not yet providing healthcare
+                services, and pricing and program terms are not final.
               </p>
             </form>
           </motion.div>

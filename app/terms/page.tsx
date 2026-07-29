@@ -45,6 +45,9 @@ export default function TermsOfService() {
               <p className="mt-4">
                 <strong>Note:</strong> Rivomed is not yet providing healthcare services. Information collected through our website is for waitlist registration and launch planning purposes.
               </p>
+              <p className="mt-4">
+                Features, pricing, and program terms described on this website are planned and subject to change. Nothing on this website constitutes a binding offer. No pricing, fee structure, or promotional term becomes binding unless and until it is set out in a separate written agreement executed at the time of onboarding.
+              </p>
               
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">3. User Representations</h2>
               <p>By using our website, you represent and warrant that:</p>
@@ -68,6 +71,9 @@ export default function TermsOfService() {
               </ul>
               <p className="mt-4">
                 Submission of an application does not guarantee acceptance into the Rivomed network. We reserve the right to approve or deny applications at our sole discretion.
+              </p>
+              <p className="mt-4">
+                Any founding provider, early access, or introductory offer described on this website — including any introductory fee-free period — describes a planned program, is limited in availability, and may be changed or withdrawn at any time before you enter into a written provider agreement with us. Your participation, and the fees applicable to it, will be governed solely by that signed agreement.
               </p>
               
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">5. Intellectual Property</h2>
@@ -140,7 +146,7 @@ export default function TermsOfService() {
               <div className="bg-gray-50 rounded-2xl p-6 mt-4">
                 <p className="font-semibold text-gray-900">Rivomed</p>
                 <p>Operated by PATHSDATA LLC</p>
-                <p className="mt-2">Email: legal@clearpathhealth.com</p>
+                <p className="mt-2">Email: hello@pathsdata.com</p>
               </div>
             </div>
           </motion.div>

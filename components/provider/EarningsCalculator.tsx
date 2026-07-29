@@ -4,11 +4,11 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const serviceTypes = [
-  { name: 'Telehealth', price: 45, providerCut: 31.50 },
-  { name: 'Primary Care', price: 79, providerCut: 55.30 },
-  { name: 'Mental Health', price: 69, providerCut: 48.30 },
-  { name: 'PT/OT', price: 69, providerCut: 48.30 },
-  { name: 'House Call', price: 109, providerCut: 76.30 },
+  { name: 'Telehealth', price: 45 },
+  { name: 'Primary Care', price: 79 },
+  { name: 'Mental Health', price: 69 },
+  { name: 'PT/OT', price: 69 },
+  { name: 'House Call', price: 109 },
 ]
 
 export default function ProviderEarningsCalculator() {
@@ -16,7 +16,7 @@ export default function ProviderEarningsCalculator() {
   const [selectedService, setSelectedService] = useState(1) // Primary Care
 
   const service = serviceTypes[selectedService]
-  const weeklyEarnings = visitsPerWeek * service.providerCut
+  const weeklyEarnings = visitsPerWeek * service.price
   const monthlyEarnings = weeklyEarnings * 4
   const yearlyEarnings = monthlyEarnings * 12
 
@@ -48,7 +48,7 @@ export default function ProviderEarningsCalculator() {
           transition={{ delay: 0.15 }}
           className="text-gray-500 text-lg"
         >
-          You keep 70% of every visit. No hidden fees.
+          Patients pay upfront. Founding providers keep 100% for their first 3 months.
         </motion.p>
       </div>
 
@@ -111,13 +111,13 @@ export default function ProviderEarningsCalculator() {
                   <span className="text-white font-bold">${service.price}</span>
                 </div>
                 <div className="flex justify-between items-center mb-3">
-                  <span className="text-white/60 text-sm">Rivomed fee (30%)</span>
-                  <span className="text-white/60">-${(service.price * 0.3).toFixed(2)}</span>
+                  <span className="text-white/60 text-sm">Paid upfront at booking</span>
+                  <span className="text-white/60">✓</span>
                 </div>
                 <div className="border-t border-white/10 pt-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-white font-medium">You keep (70%)</span>
-                    <span className="text-provider-green font-bold text-xl">${service.providerCut.toFixed(2)}</span>
+                    <span className="text-white font-medium">Per visit, to you</span>
+                    <span className="text-provider-green font-bold text-xl">${service.price.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
@@ -155,6 +155,11 @@ export default function ProviderEarningsCalculator() {
           </div>
         </div>
       </motion.div>
+
+      <p className="text-gray-400 text-xs text-center mt-5 max-w-2xl mx-auto">
+        Estimates only, based on your inputs. Founding providers pay no platform fee for their first three months.
+        After that, you choose a flat fee per patient or a flat monthly plan — pricing will be shared in full before it applies.
+      </p>
     </section>
   )
 }

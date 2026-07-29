@@ -21,8 +21,7 @@ const requirements = [
     items: [
       { text: 'Active state license in your discipline', required: true },
       { text: 'Malpractice insurance ($1M/$3M recommended)', required: true },
-      { text: 'Physical office address', required: true },
-      { text: 'NPI number (if applicable)', required: false }
+      { text: 'Physical office address', required: true }
     ],
     color: '#22C55E'
   },

@@ -10,11 +10,11 @@ const faqs = [
   },
   {
     question: "How much does it cost to join?",
-    answer: "Nothing upfront. There is no subscription fee or monthly charge. We only make money when you make money — through the revenue split on completed appointments."
+    answer: "Nothing to apply, and nothing to get started. Founding providers pay no platform fees for their first three months. We are finalizing our pricing now and will share it in full well before anyone owes anything."
   },
   {
-    question: "What is the revenue split?",
-    answer: "Standard split is 70/30 — you keep 70%, Rivomed takes 30%. Founding providers get preferred terms that are locked in permanently. The split covers payment processing, platform maintenance, and patient acquisition."
+    question: "How does Rivomed make money?",
+    answer: "A flat platform fee that covers payment processing, platform maintenance, and patient acquisition. You will be able to choose between a flat fee per patient or a flat monthly subscription — whichever fits your practice. We never take a percentage of what you earn from a visit."
   },
   {
     question: "When do I get paid?",

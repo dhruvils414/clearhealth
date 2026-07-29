@@ -50,7 +50,7 @@ const benefits = [
   },
   {
     title: 'Transparent Terms',
-    description: '70/30 revenue split. You keep 70%, Rivomed takes 30%. No hidden fees, no surprises.',
+    description: 'A flat, predictable platform fee — never a percentage of what you earn. Founding providers pay nothing for their first three months.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />

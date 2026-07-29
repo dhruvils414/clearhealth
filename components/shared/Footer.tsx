@@ -46,6 +46,13 @@ export default function Footer({ variant = 'patient' }: FooterProps) {
             </Link>
           </div>
           
+          {/* Pre-launch notice */}
+          <p className="text-xs text-gray-400 max-w-2xl mx-auto mb-4 leading-relaxed">
+            Rivomed is preparing to launch in Atlanta and is not currently providing healthcare services.
+            This site describes planned services. Features, pricing, and program terms are subject to change
+            and are not binding unless set out in a signed agreement.
+          </p>
+
           {/* Copyright */}
           <p className="text-xs text-gray-400">
             © {new Date().getFullYear()} Rivomed. Operated by PATHSDATA LLC. All rights reserved.

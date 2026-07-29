@@ -6,27 +6,27 @@ const comparisonData = [
   {
     category: 'Get paid',
     traditional: '60-90 days',
-    clearpath: 'Withdraw anytime',
+    rivomed: 'Withdraw anytime',
   },
   {
     category: 'Prior authorizations',
     traditional: '43/week average',
-    clearpath: 'Zero',
+    rivomed: 'Zero',
   },
   {
     category: 'Claim denials to fight',
     traditional: 'Constant',
-    clearpath: 'None',
+    rivomed: 'None',
   },
   {
     category: 'Admin staff needed',
     traditional: '2-4 per physician',
-    clearpath: 'Zero',
+    rivomed: 'Zero',
   },
   {
     category: 'Schedule control',
     traditional: 'Corporate mandates',
-    clearpath: '100% yours',
+    rivomed: '100% yours',
   },
 ]
 
@@ -84,7 +84,7 @@ export default function ProviderComparison() {
               <span className="text-gray-400 text-sm md:text-base">{row.traditional}</span>
             </div>
             <div className="p-5 md:p-6 text-center bg-black/[0.02] flex items-center justify-center">
-              <span className="text-provider-green font-semibold text-sm md:text-base">{row.clearpath}</span>
+              <span className="text-provider-green font-semibold text-sm md:text-base">{row.rivomed}</span>
             </div>
           </div>
         ))}

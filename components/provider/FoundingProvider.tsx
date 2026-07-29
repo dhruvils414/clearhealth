@@ -34,18 +34,18 @@ export default function FoundingProvider() {
             </h2>
             
             <p className="text-lg sm:text-xl text-white/60 mb-8 max-w-2xl">
-              We're handpicking our first providers in Atlanta. Founding providers get special benefits — locked in forever.
+              We're handpicking our first providers in Atlanta. Founding providers get benefits we won't offer once we're established.
             </p>
             
             {/* Benefits */}
             <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-10">
               <div className="bg-white/5 rounded-xl p-5 border border-white/10">
-                <h4 className="text-[#4ADE80] font-bold mb-2">Preferred Revenue Split</h4>
-                <p className="text-white/60 text-sm">Better terms than standard providers — locked in for as long as you're with us.</p>
+                <h4 className="text-[#4ADE80] font-bold mb-2">First 3 Months Fee-Free</h4>
+                <p className="text-white/60 text-sm">No platform fees for your first three months while you build up your patient base. No commitment after that — stay only if it's working for you.</p>
               </div>
               <div className="bg-white/5 rounded-xl p-5 border border-white/10">
-                <h4 className="text-[#4ADE80] font-bold mb-2">Featured Placement</h4>
-                <p className="text-white/60 text-sm">Your profile highlighted to patients. First in search results in your area.</p>
+                <h4 className="text-[#4ADE80] font-bold mb-2">First to Market</h4>
+                <p className="text-white/60 text-sm">You're live from day one — seeing Rivomed patients in Atlanta while everyone else is still applying.</p>
               </div>
               <div className="bg-white/5 rounded-xl p-5 border border-white/10">
                 <h4 className="text-[#4ADE80] font-bold mb-2">Shape the Platform</h4>

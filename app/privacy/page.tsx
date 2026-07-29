@@ -48,12 +48,14 @@ export default function PrivacyPolicy() {
               <ul className="list-disc pl-6 space-y-2">
                 <li>Name</li>
                 <li>Email address</li>
-                <li>Phone number</li>
-                <li>Professional credentials (for clinicians)</li>
-                <li>Practice or business information</li>
-                <li>State of licensure</li>
-                <li>Specialty or services offered</li>
+                <li>Phone number (optional)</li>
+                <li>Zip code (optional, for patients)</li>
+                <li>State of licensure and specialty (for clinicians)</li>
+                <li>Practice name and size (for practices)</li>
               </ul>
+              <p className="mt-4">
+                We do not collect health, medical, or clinical information through this website, and we ask that you not send it to us. Rivomed is not yet providing healthcare services, and our waitlist forms are not a secure channel for health information.
+              </p>
               
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Automatically Collected Information</h3>
               <p>When you visit our website, we may automatically collect certain information, including:</p>
@@ -72,12 +74,21 @@ export default function PrivacyPolicy() {
                 <li>Respond to your inquiries and provide customer support</li>
                 <li>Process applications from clinicians and practices</li>
                 <li>Send you updates about our services and launch timeline</li>
+                <li>Contact you by email, phone, or text to request additional information about your application</li>
                 <li>Improve our website and services</li>
                 <li>Analyze usage patterns and trends</li>
                 <li>Comply with legal obligations</li>
                 <li>Communicate with you about opportunities to join Rivomed</li>
               </ul>
               
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Calls and Text Messages</h3>
+              <p>
+                Providing a phone number is optional. If you provide one, you consent to receive calls and text messages from us at that number regarding your waitlist registration, your application, and our launch — including messages asking for additional information needed to process your application. These may be sent using automated technology.
+              </p>
+              <p className="mt-4">
+                Consent to receive calls or texts is not a condition of joining the waitlist or of being accepted into the Rivomed network. Message and data rates may apply, and message frequency varies. You can opt out at any time by replying STOP to any text message, or by contacting us using the details below. Opting out of texts does not remove you from the waitlist.
+              </p>
+
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">4. Sharing Your Information</h2>
               <p>We do not sell your personal information. We may share your information with:</p>
               <ul className="list-disc pl-6 space-y-2">
@@ -101,7 +112,7 @@ export default function PrivacyPolicy() {
                 <li>Withdraw consent where applicable</li>
               </ul>
               <p className="mt-4">
-                To exercise these rights, please contact us at privacy@clearpathhealth.com.
+                To exercise these rights, please contact us at hello@pathsdata.com.
               </p>
               
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">7. Cookies and Tracking</h2>
@@ -129,7 +140,7 @@ export default function PrivacyPolicy() {
               <div className="bg-gray-50 rounded-2xl p-6 mt-4">
                 <p className="font-semibold text-gray-900">Rivomed</p>
                 <p>Operated by PATHSDATA LLC</p>
-                <p className="mt-2">Email: privacy@clearpathhealth.com</p>
+                <p className="mt-2">Email: hello@pathsdata.com</p>
               </div>
             </div>
           </motion.div>

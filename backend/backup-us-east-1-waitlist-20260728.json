@@ -1,0 +1,187 @@
+{
+    "Items": [
+        {
+            "userAgent": {
+                "S": "curl/8.7.1"
+            },
+            "ipAddress": {
+                "S": "49.43.33.103"
+            },
+            "lastName": {
+                "S": "User"
+            },
+            "createdAt": {
+                "S": "2026-04-06T07:39:31.429700Z"
+            },
+            "source": {
+                "S": "website"
+            },
+            "id": {
+                "S": "wl_69d36333b2360458"
+            },
+            "email": {
+                "S": "test@example.com"
+            },
+            "firstName": {
+                "S": "Test"
+            },
+            "type": {
+                "S": "patient"
+            }
+        },
+        {
+            "userAgent": {
+                "S": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+            },
+            "ipAddress": {
+                "S": "108.206.36.18"
+            },
+            "lastName": {
+                "S": "Shah"
+            },
+            "createdAt": {
+                "S": "2026-07-23T02:03:57.781817Z"
+            },
+            "source": {
+                "S": "website"
+            },
+            "id": {
+                "S": "wl_6a61768d4363c720"
+            },
+            "email": {
+                "S": "dhruvils414@gmail.com"
+            },
+            "firstName": {
+                "S": "Dhruvil"
+            },
+            "type": {
+                "S": "patient"
+            }
+        },
+        {
+            "userAgent": {
+                "S": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+            },
+            "ipAddress": {
+                "S": "108.206.36.18"
+            },
+            "lastName": {
+                "S": "Shah"
+            },
+            "createdAt": {
+                "S": "2026-07-29T00:39:56.167846Z"
+            },
+            "source": {
+                "S": "website"
+            },
+            "id": {
+                "S": "wl_6a694bdcd906e194"
+            },
+            "email": {
+                "S": "dshah@datinit.com"
+            },
+            "firstName": {
+                "S": "Dhruvil"
+            },
+            "type": {
+                "S": "patient"
+            }
+        },
+        {
+            "userAgent": {
+                "S": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+            },
+            "ipAddress": {
+                "S": "187.191.37.51"
+            },
+            "lastName": {
+                "S": "Sawayn"
+            },
+            "createdAt": {
+                "S": "2026-04-20T20:34:13.585224Z"
+            },
+            "source": {
+                "S": "website"
+            },
+            "id": {
+                "S": "wl_69e68dc5ba4b70a6"
+            },
+            "email": {
+                "S": "cloyd.rodriguez@theaccessuk.org"
+            },
+            "zipCode": {
+                "S": "30969"
+            },
+            "phone": {
+                "S": "+13658329394"
+            },
+            "firstName": {
+                "S": "Delores"
+            },
+            "type": {
+                "S": "patient"
+            }
+        },
+        {
+            "userAgent": {
+                "S": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+            },
+            "ipAddress": {
+                "S": "49.43.32.133"
+            },
+            "lastName": {
+                "S": "Shah"
+            },
+            "createdAt": {
+                "S": "2026-04-16T17:52:34.411388Z"
+            },
+            "source": {
+                "S": "website"
+            },
+            "id": {
+                "S": "wl_69e121e247688591"
+            },
+            "email": {
+                "S": "shahdhruvil09@gmail.com"
+            },
+            "firstName": {
+                "S": "Dhruvil"
+            },
+            "type": {
+                "S": "patient"
+            }
+        },
+        {
+            "userAgent": {
+                "S": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+            },
+            "ipAddress": {
+                "S": "49.43.33.103"
+            },
+            "lastName": {
+                "S": "Shah"
+            },
+            "createdAt": {
+                "S": "2026-04-06T07:40:56.557417Z"
+            },
+            "source": {
+                "S": "website"
+            },
+            "id": {
+                "S": "wl_69d36388d141f7fd"
+            },
+            "email": {
+                "S": "dshah@pathsdata.com"
+            },
+            "firstName": {
+                "S": "Dhruvil"
+            },
+            "type": {
+                "S": "patient"
+            }
+        }
+    ],
+    "Count": 6,
+    "ScannedCount": 6,
+    "ConsumedCapacity": null
+}
